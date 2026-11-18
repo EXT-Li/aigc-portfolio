@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="一个以东方意象、人物造型与动态影像为核心的视觉作品集。" />
+    <title>万象集 · Visual Archive</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="mark" href="#gallery" aria-label="万象集首页"><span class="mark-seal">万</span><span class="mark-text">万象集</span></a>
+      <div class="top-meta"><span data-i18n="archive">视觉作品档案</span><span class="dot"></span><span data-i18n="live">本地预览</span></div>
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="切换语言"><span class="lang-active">中</span><span>/</span><span>EN</span></button>
+    </header>
+
+    <main id="app" class="shell">
+      <section class="hero" id="gallery" data-view="gallery">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="seal-line"></span><span data-i18n="eyebrow">东方意象 · 视觉实验 · 动态叙事</span></p>
+          <h1><span data-i18n="heroLineOne">静观万象</span><em data-i18n="heroLineTwo">形与势，皆在流动</em></h1>
+          <p class="hero-note" data-i18n="heroNote">一份由场景、人物与视频组成的视觉档案。以古意的秩序容纳当代的想象。</p>
+          <a class="scroll-cue" href="#scene-view"><span data-i18n="scroll">向下浏览</span><span class="arrow">↘</span></a>
+        </div>
+        <div class="hero-orbit" aria-hidden="true">
+          <div class="orbit-ring orbit-ring-a"></div><div class="orbit-ring orbit-ring-b"></div>
+          <div class="hero-tile tile-a"></div><div class="hero-tile tile-b"></div><div class="hero-tile tile-c"></div>
+          <span class="orbit-caption">山 · 水 · 人 · 动</span>
+        </div>
+        <div class="hero-index"><span>VISUAL ARCHIVE</span><span class="index-rule"></span><span data-i18n="heroHint">选择一个入口开始</span></div>
+      </section>
+
+      <section class="collection-section video-section" id="video-view" data-view="videos">
+        <div class="section-heading">
+          <div><p class="eyebrow"><span class="seal-line"></span><span data-i18n="videosKicker">时间影像</span></p><h2 data-i18n="videosTitle">视频</h2></div>
+          <p class="section-intro" data-i18n="videosIntro">把静止的意象推向下一秒，用运动、节奏和声音之外的画面完成叙事。</p>
+        </div>
+        <div id="videoGrid" class="video-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="collection-section" id="scene-view" data-view="scenes">
+        <div class="section-heading">
+          <div><p class="eyebrow"><span class="seal-line"></span><span data-i18n="scenesKicker">空间意象</span></p><h2 data-i18n="scenesTitle">场景</h2></div>
+          <p class="section-intro" data-i18n="scenesIntro">从一扇窗、一座桥、一片云海开始，收拢东方空间的光与气。</p>
+        </div>
+        <div id="sceneGrid" class="group-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="collection-section" id="character-view" data-view="characters">
+        <div class="section-heading">
+          <div><p class="eyebrow"><span class="seal-line"></span><span data-i18n="charactersKicker">形神档案</span></p><h2 data-i18n="charactersTitle">人物角色</h2></div>
+          <p class="section-intro" data-i18n="charactersIntro">每一张脸都带着自己的气场；服饰、纹理与姿态共同构成角色的来处。</p>
+        </div>
+        <div id="characterGrid" class="group-grid character-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="collection-section" id="creature-view" data-view="creatures">
+        <div class="section-heading">
+          <div><p class="eyebrow"><span class="seal-line"></span><span data-i18n="creaturesKicker">灵兽图鉴</span></p><h2 data-i18n="creaturesTitle">幻想生物</h2></div>
+          <p class="section-intro" data-i18n="creaturesIntro">从羽翼、鳞甲到山海异形，记录不属于现实却有着真实气息的生命形态。</p>
+        </div>
+        <div id="creatureGrid" class="group-grid creature-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="manifesto" id="about-view" data-view="about">
+        <div class="manifesto-mark">观</div>
+        <p class="eyebrow"><span class="seal-line"></span><span data-i18n="aboutKicker">观物 · 造境 · 成像</span></p>
+        <h2><span data-i18n="aboutLineOne">把东方的留白</span><br /><em data-i18n="aboutLineTwo">留给想象继续生长。</em></h2>
+        <p data-i18n="aboutBody">这个档案以三种媒介展开：空间承载氛围，角色承载情绪，视频让一切发生。点击任意图片或封面，进入更大的观看尺度。</p>
+      </section>
+    </main>
+
+    <nav class="dock" aria-label="作品集导航">
+      <a class="dock-mark" href="#gallery">万象集</a><span class="divider"></span>
+      <a class="dock-link active" href="#gallery" data-nav="gallery"><span data-i18n="navHome">序章</span></a>
+      <a class="dock-link" href="#video-view" data-nav="videos"><span data-i18n="navVideos">视频</span></a>
+      <a class="dock-link" href="#scene-view" data-nav="scenes"><span data-i18n="navScenes">场景</span></a>
+      <a class="dock-link" href="#character-view" data-nav="characters"><span data-i18n="navCharacters">人物</span></a>
+      <a class="dock-link" href="#creature-view" data-nav="creatures"><span data-i18n="navCreatures">灵兽</span></a>
+      <span class="divider"></span><a class="dock-link" href="#about-view" data-nav="about"><span data-i18n="navAbout">观览</span></a>
+    </nav>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="关闭">×</button>
+      <div class="lightbox-inner" id="lightboxInner"></div>
+    </div>
+    <template id="loadingTemplate"><div class="loading"><span class="loader-mark">万</span><span data-i18n="loading">正在整理视觉档案…</span></div></template>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
+
